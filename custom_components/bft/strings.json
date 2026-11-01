@@ -1,1 +1,20 @@
-
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "BFT uControl",
+        "description": "Anmeldung bei deinem BFT-Konto. Das Gerät Tor wird automatisch gesucht.",
+        "data": {
+          "username": "Benutzername",
+          "password": "Passwort"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Verbindung zu BFT fehlgeschlagen oder Gerät Tor nicht gefunden."
+    },
+    "abort": {
+      "already_configured": "Dieses Tor ist bereits eingerichtet."
+    }
+  }
+}
