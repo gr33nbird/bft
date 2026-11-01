@@ -1,5 +1,5 @@
 {
-    "name": "BFT",
-    "domains": ["cover", "sensor"],
-    "render_readme": true
-  }
+  "name": "BFT uControl",
+  "homeassistant": "2026.10.0",
+  "render_readme": true
+}
