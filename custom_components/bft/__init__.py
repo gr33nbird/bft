@@ -33,10 +33,10 @@ async def async_setup_entry(
 
         await coordinator.async_config_entry_first_refresh()
 
-except BFTApiError as err:
-    raise ConfigEntryNotReady(
-        f"Unable to connect to BFT: {err}"
-    ) from err
+    except BFTApiError as err:
+        raise ConfigEntryNotReady(
+            f"Unable to connect to BFT: {err}"
+        ) from err
 
     hass.data.setdefault(DOMAIN, {})
     hass.data[DOMAIN][entry.entry_id] = coordinator
