@@ -1,9 +1,10 @@
 {
   "domain": "bft",
-  "name": "BFT",
-  "version": "0.0.1",
+  "name": "BFT uControl",
+  "codeowners": [],
+  "config_flow": true,
   "documentation": "https://github.com/perimore/bft",
-  "requirements": [],
-  "dependencies": [],
-  "codeowners": []
+  "iot_class": "cloud_polling",
+  "version": "1.0.0",
+  "requirements": []
 }
