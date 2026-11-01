@@ -37,7 +37,7 @@ class BFTCoordinator(DataUpdateCoordinator):
                 self.device_id,
                 "diagnosis",
             )
-
+            _LOGGER.warning("BFT DIAGNOSE: %s", status)
             first_pos = int(status["first_engine_pos_int"])
             second_pos = int(status["second_engine_pos_int"])
 
