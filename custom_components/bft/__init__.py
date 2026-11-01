@@ -2,6 +2,7 @@
 
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
+from homeassistant.exceptions import ConfigEntryNotReady
 
 from .api import BFTApi, BFTApiError
 from .const import DOMAIN
@@ -32,8 +33,10 @@ async def async_setup_entry(
 
         await coordinator.async_config_entry_first_refresh()
 
-    except BFTApiError:
-        return False
+except BFTApiError as err:
+    raise ConfigEntryNotReady(
+        f"Unable to connect to BFT: {err}"
+    ) from err
 
     hass.data.setdefault(DOMAIN, {})
     hass.data[DOMAIN][entry.entry_id] = coordinator
